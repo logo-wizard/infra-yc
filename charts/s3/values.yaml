@@ -1,0 +1,8 @@
+s3Name:
+s3Description:
+infraNamespace: "infrastructure"
+securityGroup:
+
+diskSize: 24
+resourcePresetId: "hm3-c2-m8"
+diskTypeId: "network-ssd"

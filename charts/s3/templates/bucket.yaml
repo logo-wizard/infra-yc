@@ -1,0 +1,27 @@
+apiVersion: iam.yandex-cloud.jet.crossplane.io/v1alpha1
+kind: ServiceAccountStaticAccessKey
+metadata:
+  name: {{ include "s3CredsName" . }}
+spec:
+  forProvider:
+    description: "Static access key for object storage ({{ include "s3FullName" . }})"
+    serviceAccountIdRef:
+      name: crossplane
+  writeConnectionSecretToRef:
+    name: {{ include "s3CredsSecretName" . }}
+    namespace: {{ .Values.infraNamespace }}
+---
+apiVersion: storage.yandex-cloud.jet.crossplane.io/v1alpha1
+kind: Bucket
+metadata:
+  name: {{ include "s3FullName" . }}
+spec:
+  forProvider:
+    accessKeyRef:
+      name: {{ include "s3CredsName" . }}
+    secretKeySecretRef:
+      name: {{ include "s3CredsSecretName" . }}
+      namespace: {{ .Values.infraNamespace }}
+      key: attribute.secret_key
+    bucket: {{ include "s3FullName" . }}
+    acl: "public-read"

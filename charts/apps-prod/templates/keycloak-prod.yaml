@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak-prod
+  namespace: argocd
+spec:
+  destination:
+    namespace: keycloak
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: charts/keycloak
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+        - values.yaml
+        - secrets+age-import:///helm-secrets-private-keys/age-key.txt?../../values/keycloak-prod.yaml
+  syncPolicy:
+    automated: { }
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,12 @@
+redisName:
+redisDescription:
+redisZone: "ru-central1-b"
+redisVersion: "6.2"
+infraNamespace: "infrastructure"
+securityGroup:
+
+redisPassword:
+
+diskSize: 24
+resourcePresetId: "hm3-c2-m8"
+diskTypeId: "network-ssd"

@@ -1,0 +1,37 @@
+apiVersion: mdb.yandex-cloud.jet.crossplane.io/v1alpha1
+kind: PostgresqlCluster
+metadata:
+  name: {{ include "postgresFullName" . }}
+spec:
+  forProvider:
+    name: {{ include "postgresFullName" . }}
+    description: {{ include "postgresDesc" . }}
+    environment: PRODUCTION
+    folderIdRef:
+      name: default
+    networkIdRef:
+      name: default
+    host:
+      - assignPublicIp: {{ .Values.assignPublicIp }}
+        zone: {{ .Values.postgresZone }}
+    securityGroupIdsRefs:
+      - name: {{ .Values.securityGroup }}
+    config:
+      - resources:
+          - diskSize: {{ .Values.diskSize }}
+            diskTypeId: {{ .Values.diskTypeId }}
+            resourcePresetId: {{ .Values.resourcePresetId }}
+        version: "{{ .Values.postgresVersion }}"
+    maintenanceWindow:
+      - type: WEEKLY
+        day: SAT
+        hour: 22
+    database:
+      - name: {{ .Values.dbName }}
+        owner: {{ .Values.dbUser }}
+    user:
+      - name: {{ .Values.dbUser }}
+        passwordSecretRef:
+          key: password
+          name: {{ include "postgresFullName" . }}-creds
+          namespace: {{ .Values.infraNamespace }}

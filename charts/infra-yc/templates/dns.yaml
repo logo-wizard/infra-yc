@@ -1,0 +1,29 @@
+kind: Recordset
+apiVersion: dns.yandex-cloud.jet.crossplane.io/v1alpha1
+metadata:
+  name: apps
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    data:
+      - "62.84.122.67"
+    name: "*.apps.konstant-anxiety.ru."
+    ttl: 600
+    type: A
+    zoneIdRef:
+      name: yc-courses
+---
+kind: Recordset
+apiVersion: dns.yandex-cloud.jet.crossplane.io/v1alpha1
+metadata:
+  name: apps-cert-challenge
+spec:
+  deletionPolicy: Orphan
+  forProvider:
+    data:
+      - "fpqi7odevan2skl0sqha.cm.yandexcloud.net."
+    name: "_acme-challenge.apps.konstant-anxiety.ru."
+    ttl: 600
+    type: CNAME
+    zoneIdRef:
+      name: yc-courses

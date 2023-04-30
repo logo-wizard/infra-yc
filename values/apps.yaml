@@ -1,0 +1,6 @@
+spec:
+  source:
+    repoURL: https://github.com/logo-wizard/infra-yc.git
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc

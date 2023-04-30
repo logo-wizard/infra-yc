@@ -1,0 +1,5 @@
+apiVersion: v2
+name: s3-bucket
+description: s3 yandex cloud bucket
+version: 0.1.0
+appVersion: "1.0"

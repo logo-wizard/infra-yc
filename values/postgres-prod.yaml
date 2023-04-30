@@ -1,0 +1,27 @@
+postgresName: ENC[AES256_GCM,data:AfONPko6Tg==,iv:iMUZmE8Q7MWcdW2wn9fNK1hviQUOhQXwB9CoYBwDKNc=,tag:AbA6mtnRhHQeb/TvlI/7fw==,type:str]
+postgresDescription: ENC[AES256_GCM,data:Za549OrucKCk9Er/tGJ7huGiXugWIUXC,iv:+JkdnqHoua6HGOnNZX/b8CgdJeHWUS8cHhP8Dav+Hmg=,tag:8tIyK/3FGzEObzXmHUesBw==,type:str]
+assignPublicIp: ENC[AES256_GCM,data:fyoutA==,iv:KdFTFzJteoQrukA2KvWP2kSpj1CqMdpqz3mDHILa6Ok=,tag:mYyUa1FKiqKBMSjay3UQPQ==,type:bool]
+securityGroup: ENC[AES256_GCM,data:iS88+v8+9D5tXZiHWonCfeGDLA==,iv:7wnQkvAs8t8+dzF+5nG8jkhMhzi/QnR0d8SsFFqkr1Q=,tag:R8OzCLmedLaj2iB4jgWFwg==,type:str]
+dbUser: ENC[AES256_GCM,data:7Qs+EGsWG9h82rec,iv:IEROzK58jRn9QeVFpR30F7b6PlIxc3Cu/yc5JxLApiQ=,tag:r37w9LqS0OHKs16h6GpwFw==,type:str]
+dbPassword: ENC[AES256_GCM,data:e/NZj8utGCZ+9Qyw,iv:biNStibnDmgnnbQRbRdd/HjH3l4QITdlpPDVtPI3x9M=,tag:wjPjh6NgCX91HaFK/oDiuw==,type:str]
+dbName: ENC[AES256_GCM,data:sklX0vzK,iv:mfeN4CDha9BIUlenVrzEK69Rt9KxXFwd7/oYWwUsESA=,tag:LeRvF17sAlcgdgwFQSQ2Wg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1pj5elnqgt6c4yaatfpv652c8kcn4pwty2ez5l8y7e0rwh9e0gcpqkjj4xn
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB3SlBiTzlUaGRJNmdqc1p4
+            Y3dSMmoxOXhPZ0lBUGtvMDJuMHJTZTgva1VzCk4yQ1ZSd3VEOWJjbXdYSEk5YTJy
+            VCtkS2xVVTRtZVBDKzJ3aU1USTVxWVkKLS0tIG16RkxNdmcrc09SaXJFbWNlL2Zm
+            dm5KMEs5dmxFZHo5RnVLb2xEWUgzZGcKWLUtWuqB5YnkiUy+W7a9tC/XftazZcoJ
+            3lPq7kwR9eu7K0OUH9l4/+bRXtqLlUGYorQyUJNMtyE1PuGP3S1LYQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-04-30T14:39:10Z"
+    mac: ENC[AES256_GCM,data:Uk65Q6SZj2HlaPNEEcMjjK9eRR1WZRH6biysL/XArBh5urtk3dnlu6AgjFZIRgu35Vy7Ek1yd8S+uRF/iqQeGJv6/3ao/hh/yXuKuieOMMVGktKMhG3panRC/W6ZE7GJcPyU+k/K3f6Qg4c5rk/2GSkPc+Nwfo50w9pFq2bIIcI=,iv:baWWjxhUkPMrOWGrU+rmyHYcpxOvIGaBSMOIg4B3aWo=,tag:rRXEAkh3q4QP9pWpC3N5eQ==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.7.3
