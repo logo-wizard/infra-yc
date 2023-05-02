@@ -6,7 +6,7 @@ serviceIpv4Range: "10.97.0.0/16"
 nodeCount: 1
 nodeDiskSize: 64
 nodeMem: 12
-nodeCores: 2
+nodeCores: 4
 securityGroup: prod-security-group
 nodeSubnet: default-ru-central1-b
 addWorkerNodeGroup: false
