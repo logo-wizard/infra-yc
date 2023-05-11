@@ -56,10 +56,10 @@ spec:
         v4CidrBlocks:
           - 0.0.0.0/0
       - description: rule-node-port-api
-          protocol: tcp
-          port: 30088
-          v4CidrBlocks:
-            - 0.0.0.0/0
+        protocol: tcp
+        port: 30088
+        v4CidrBlocks:
+          - 0.0.0.0/0
     egress:
       - description: rule-egress-all
         protocol: any
