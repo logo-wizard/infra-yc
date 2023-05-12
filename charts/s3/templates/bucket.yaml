@@ -25,3 +25,4 @@ spec:
       key: attribute.secret_key
     bucket: {{ include "s3FullName" . }}
     acl: "public-read"
+    lifecycleRule: []
